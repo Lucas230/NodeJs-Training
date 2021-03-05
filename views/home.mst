@@ -1,0 +1,25 @@
+<h1>Seja bem vindo(a)</h1>
+<p>Qualquer Mensagem</p>
+
+{{#mostrar}}
+<p>Nome: {{nome}} -- Idade: {{idade}}</p>
+{{/mostrar}}
+
+<ul>
+{{#ingredientes}}
+    <li>{{nome}}-{{qt}}</li>
+
+{{/ingredientes}}
+</ul>
+{{^ingredientes}}{{!Se não houver ingredientes ele printa}}
+<p>Não há igredientes</p>
+{{/ingredientes}}
+<hr/>
+
+<ul>
+    {{#interesses}}
+        <li>{{.}}</li>{{!esse ponto pega o conteudo do array}}
+    {{/interesses}}
+</ul>
+<hr/>
+{{{teste}}} {{!Ao utilizar três colchetes voce pega o html diretamente}}
