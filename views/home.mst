@@ -1,25 +1,12 @@
-<h1>Seja bem vindo(a)</h1>
-<p>Qualquer Mensagem</p>
+{{>header}}{{!mostrar cabeçalho }}
+<h1>Página Home </h1>
 
-{{#mostrar}}
-<p>Nome: {{nome}} -- Idade: {{idade}}</p>
-{{/mostrar}}
+<!-- <p>USUÁRIO LOGADO: {{userInfo.name}}</p> -->
 
-<ul>
-{{#ingredientes}}
-    <li>{{nome}}-{{qt}}</li>
-
-{{/ingredientes}}
-</ul>
-{{^ingredientes}}{{!Se não houver ingredientes ele printa}}
-<p>Não há igredientes</p>
-{{/ingredientes}}
-<hr/>
-
-<ul>
-    {{#interesses}}
-        <li>{{.}}</li>{{!esse ponto pega o conteudo do array}}
-    {{/interesses}}
-</ul>
-<hr/>
-{{{teste}}} {{!Ao utilizar três colchetes voce pega o html diretamente}}
+{{#posts}}
+    <div class="post">
+        <h3><a href="/post/{{slug}}">{{title}}</a></h3>
+        <p>{{body}}</p>
+        <a href= "/post/{{slug}}/edit">[ Editar ]</a>
+    </div>
+{{/posts}}
