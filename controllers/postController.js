@@ -8,23 +8,23 @@ exports.view = async(req,res) =>{
 
 //renderiza o formulário de adição
 exports.add = (req, res)=>{
-    res.render('postAdd')
+    res.render('postAdd');
 }
 //Adição do Posts
 exports.addAction= async(req,res)=>{//cria a função anônima para addAction
     req.body.tags = req.body.tags.split(',').map(t=>t.trim())//vai splitar o vetor das tags separando cada uma por vírgula
+    req.body.author = req.user._id;
 
-    const post = new Post(req.body)//Requisição post, pois os dados foram enviados internamente. quando são query é pq os dados são pegos na url
-    
+    const post = new Post(req.body);//Requisição post, pois os dados foram enviados internamente. quando são query é pq os dados são pegos na url
     try{
-        await post.save()//O async e o await faz o sistema esperar a resposta do mongoDB nesse caso para depois disso continuar rodando a aplicação
+        await post.save();//O async e o await faz o sistema esperar a resposta do mongoDB nesse caso para depois disso continuar rodando a aplicação
     }catch(error){
         req.flash('error', 'Erro: ' + error.message)
         return res.redirect('/post/add')//depois da mensagem de erro ele retorna para a página de add, o return faz com que termine a execução
     } 
     
-    req.flash('success', 'Post salvo com sucesso!')
-    res.redirect('/')
+    req.flash('success', 'Post salvo com sucesso!');
+    res.redirect('/');
 }
 
 //Formulário de edição

@@ -1,6 +1,17 @@
-<h1>Faça seu login:</h1>
+{{>header}}
+<h2>Login</h2>
 
-<form>
-<input type="text" name="usuario"/>
-<button>Entrar</button>
+<form  method="POST">
+        CPF:
+        <input type='text' name="cpf"/>
+    </label>
+    <br/>
+    <label>
+        Senha:
+        <input type='password' name="senha"/>
+    </label>
+    <br/>
+    <label>
+        <input type="submit" value="Entrar"/>
+    </label>
 </form>

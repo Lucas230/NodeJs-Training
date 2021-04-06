@@ -1,10 +1,15 @@
 {{>header}}
 <h2>Adcionar Post</h2>
 
-<form  method="POST">
+<form  method="POST" enctype="multipart/form-data">
+    <label>
+        Imagem:
+        <input type="file" name="photo"/>
+    </label>
+    <br/>
     <label>
         Titulo: 
-        <input type='text' name="title"/>
+        <input type="text" name="title"/>
     </label>
     <br/>
     <label>
@@ -20,6 +25,4 @@
     <label>
         <input type="submit" value="Salvar"/>
     </label>
-
-
 </form>

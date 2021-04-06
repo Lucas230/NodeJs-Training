@@ -50,7 +50,7 @@ border-radius:5px;
 overflow:hidden;
 }
 .post img {
-max-width:100%;
+    max-width:100%;
 }
 form {
 margin:20px;
@@ -87,4 +87,14 @@ padding:10px;
 }
 .tag.selected a {
 color:#FF0000;
+}
+select{
+    display:block;
+    padding:10px 15px;
+    border:2px solid #CCC;
+    font-size:16px;
+    outline:0;
+    resize:none;
+    margin-top:10px;
+    width:400px;
 }

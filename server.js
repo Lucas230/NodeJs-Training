@@ -16,6 +16,7 @@ mongoose.connection.on('error', (error)=>{
 
 //Carregando todos os models
 require('./models/Post')	
+require('./models/User')
 
 const app = require ('./app')//Depois de puxar o mongoose, conectar com o BD e carregar os models é carregado o aplicativo
 
