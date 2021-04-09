@@ -1,0 +1,49 @@
+{{>header}}
+<h2>Adcionar Usuário</h2>
+
+<form  method="POST">
+    <label>
+        Nome:
+        <input type='text' name="nome"/>
+    </label>
+    <br/>
+    <label>
+        Tipo de Usuário:
+        <select name="userType">
+            <option value="1">Participante</option>
+            <option value="2">Professor</option>
+            <option value="3">Palestrante</option>
+            <option value="4">Organizador</option>
+            <option value="5">Empresário</option>
+        </select>
+    </label>
+    <br/>
+    <label>
+        E-mail:
+        <input type='email' name="email"/>
+    </label>
+    <br/>
+    <label>
+        Celular:
+        <input type='text' name="celular"/>
+    </label>
+    <br/>
+    <label>
+        RA:
+        <input type='text' name="ra"/>
+    </label>
+    <br/>
+    <label>
+        CPF:
+        <input type='text' name="cpf"/>
+    </label>
+    <br/>
+    <label>
+        Senha:
+        <input type='password' name="senha"/>
+    </label>
+    <br/>
+    <label>
+        <input type="submit" value="Cadastrar"/>
+    </label>
+</form>

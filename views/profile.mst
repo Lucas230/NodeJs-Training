@@ -1,0 +1,64 @@
+{{>header}}
+
+<h1>Perfil</h1>
+
+<form method="POST">
+
+    <label>
+        Nome Completo:
+        <input type="text" name="nome" value="{{user.nome}}" />
+    </label>
+    <br />
+    <label>
+        Tipo de Usuário:
+        <select name="userType">
+            <option value="1">Participante</option>
+            <option value="2">Professor</option>
+            <option value="3">Palestrante</option>
+            <option value="4">Organizador</option>
+            <option value="5">Empresário</option>
+        </select>
+    </label>
+    <br />
+    <label>
+        E-mail:
+        <input type="email" name="email" value="{{user.email}}" />
+    </label>
+    <br />
+    <label>
+        Celular:
+        <input type="text" name="celular" value="{{user.celular}}" />
+    </label>
+    <br />
+    <label>
+        RA:
+        <input type="text" name="ra" value="{{user.ra}}" />
+    </label>
+    <br />
+    <label>
+        CPF:
+        <input type="text" name="cpf" value="{{user.cpf}}" />
+    </label>
+    <br />
+    <label>
+        <input type="submit" value="Salvar" />
+    </label>
+</form>
+
+<hr />
+
+<form method="POST" action="profile/password">
+    <label>
+        Nova senha:
+        <input type="password" name="senha" />
+    </label>
+    <br />
+    <label>
+        Confirmar nova senha:
+        <input type="password" name="senha-confirma" />
+    </label>
+    <br />
+    <label>
+        <input type="submit" value="Salvar" />
+    </label>
+</form>

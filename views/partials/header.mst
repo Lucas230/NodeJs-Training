@@ -8,7 +8,10 @@
 </head>
 <body>
     <header>
-        <h1>Cabeçalho</h1>
+        <h1>Deep Web</h1>
+        {{#user}}
+            Olá, <a href="/profile">{{user.nome}}</a>!
+        {{/user}}
         <hr/>
             <ul>
                 {{#h.menu}}
