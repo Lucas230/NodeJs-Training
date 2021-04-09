@@ -32,11 +32,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         trim: true,
         required: 'O cpf é obrigatório!'
-    }
+    },
+    resetPasswordToken: String,
+    resetPasswordExpires: Date
     
 });
 
-userSchema.plugin(passportLocalMongoose, {usernameField: 'cpf'});
+userSchema.plugin(passportLocalMongoose, {usernameField: 'email'});
 
 module.exports = mongoose.model('User', userSchema);
 

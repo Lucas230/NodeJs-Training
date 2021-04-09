@@ -2,8 +2,8 @@ const mongoose = require('mongoose')
 const Post = mongoose.model('Post')
 
 exports.view = async(req,res) =>{
-    const post = await Post.findOne({ slug:req.params.slug })
-    res.render('view', {post})
+    const post = await Post.findOne({ slug:req.params.slug});
+    res.render('view', {post});
 }
 
 //renderiza o formulário de adição

@@ -1,4 +1,4 @@
-exports.defaultPageTitle = "Site Do Lucão"
+exports.defaultPageTitle = "Deep Web"
 
 exports.menu = [
     {name:'Home', slug: '/', guest:true, logged:true},

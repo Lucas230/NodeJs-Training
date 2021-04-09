@@ -1,5 +1,9 @@
 {{>header}}
 <h1>{{post.title}}</h1>
+{{#post.photo}}
+<img src="/media/{{post.photo}}" width="200"/>
+{{/post.photo}}
 <article>{{post.body}}</article>
+<p>Autor: {{post.author.nome}}</p>
 <hr/>
 <small>{{post.tags}}</small>

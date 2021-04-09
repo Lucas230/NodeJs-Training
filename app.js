@@ -7,10 +7,10 @@ const flash = require   ('express-flash')
 const passport = require ('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
-const router = require ('./routes/index')
-const helpers = require('./helpers')
-const errorHandler = require('./handlers/errorHandler')
-const { register } = require('./controllers/userController')
+const router = require ('./routes/index');
+const helpers = require('./helpers');
+const errorHandler = require('./handlers/errorHandler');
+const { register } = require('./controllers/userController');
 
 //Configurações//Começo da requisição
 const app = express();
